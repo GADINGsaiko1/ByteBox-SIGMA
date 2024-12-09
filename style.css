@@ -1,0 +1,322 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+    scroll-behavior: smooth;
+}
+
+body {
+    min-height: 100vh;
+    background: #000;
+}
+
+
+/* nav */
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    transition: 0.6s;
+    padding: 40px 100px;
+    z-index: 1000;
+}
+
+header.sticky {
+    padding: 10px 100px;
+    background: #fff;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Optional shadow for depth */
+}
+
+header .logo {
+    font-weight: 700;
+    color: #fff;
+    text-decoration: none;
+    font-size: 2em;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    text-shadow:0 0 10px #fff,
+                0 0 20px #fff,
+                0 0 40px #fff,
+                0 0 80px #fff;
+    transition: 0.6s;
+}
+
+header.sticky .logo {
+    color: #000;
+    text-shadow:0 0 5px #000;
+}
+
+header ul {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+header ul li {
+    list-style: none;
+}
+
+header ul li a {
+    margin: 0 15px;
+    text-decoration: none;
+    color: #fff;
+    letter-spacing: 2px;
+    font-weight: 500;
+    transition: 0.6s;
+}
+header ul li a:hover {
+    text-shadow:0 0 10px #fff,
+                0 0 20px #fff,
+                0 0 40px #fff;
+}
+
+header.sticky ul li a {
+    color: #000;
+}
+header.sticky ul li a:hover {
+    text-shadow:0 0 10px #000,
+    0 0 20px #000;
+}
+
+
+
+/* homepage */
+
+#home-page {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#home-page .content {
+    height: 50%;
+    /* align-items: center; */
+    margin-top: 11rem;
+}
+
+#home-page .content h3 {
+    color: #fff;
+    text-transform: uppercase;
+    font-size: 2rem;
+    font-weight: 800;
+    margin-bottom: 2rem;
+    margin-top: 2rem;
+}
+
+#home-page .content a {
+    display: flex;
+    width: 30%;
+    padding: 15px;
+    color: #fff;
+    border: 1px solid #fff;
+    border-radius: 2rem;
+    text-decoration: none;
+    justify-content: center;
+    margin: 0 auto;
+    transition: ease-in 0.5s;
+    transition: ease-out 0.3s;
+}
+
+#home-page .content a:hover {
+    background-color: #fff;
+    color: #000;
+    border: none;
+}
+
+/* about */
+
+#about {
+    height: 100vh;
+    padding-top: 4rem;
+    margin-top: 4rem;
+    color: #fff;
+    display: flex;
+    padding: 0 100px;
+}
+
+/* #about .left-content {
+    flex: 1;
+}
+
+#about .right-content {
+    flex: 1;
+} */
+
+#about .left-content h3 {
+    font-size: 4rem;
+    font-weight: 700;
+    padding-bottom: 1rem;
+}
+
+#about .right-content img {
+    width: 30rem;
+    height: 30rem;
+}
+
+
+/* pricelist */
+#order {
+    height: 100vh;
+}
+
+#order .pricing {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    padding: 50px 20px;
+}
+
+#order .harga {
+    text-align: center;
+    font-size: 5rem;
+    font-weight: 800;
+    letter-spacing: 2px;
+    color: #fff;
+}
+
+.card {
+    background-color: #000;
+    border-radius: 2rem;
+    padding: 40px;
+    width: 380px;
+    height: 400px; 
+    text-align: center;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s;
+    margin-bottom: 30px; 
+    border: 1px solid #fff;
+}
+
+.card:hover {
+    transform: translateY(-10px);
+    -webkit-box-shadow:0px 0px 16px 0px rgba(255,255,255,0.85);
+    -moz-box-shadow: 0px 0px 16px 0px rgba(255,255,255,0.85);
+    box-shadow: 0px 0px 16px 0px rgba(255,255,255,0.85);
+}
+
+.card h2 {
+    margin-bottom: 3rem;
+    font-size: 2em;
+    color: #fff;
+}
+
+.price {
+    font-size: 1.8em;
+    margin-bottom: 20px;
+    color: #fff;
+    font-family: "Parkinsans", sans-serif;
+}
+
+.card ul {
+    list-style-type: none;
+    padding: 0;
+    margin-bottom: 3rem;
+}
+
+.card ul li {
+    margin: 10px 0;
+    color: #fff;
+}
+
+.card.pro {
+    background-color: #000;
+    border: 2px solid #fff;
+    height: 400px;
+}
+
+.card.pro-plus {
+    background-color: #000;
+    border: 3px solid #fff;
+    height: 430px;
+}
+
+.card .btn {
+    padding: 1rem;
+    border: 1px solid #fff;
+    border-radius: 2rem;
+    color: #fff;
+    cursor: pointer;
+    transition: ease-in-out 0.3s;
+}
+
+.card .btn:hover {
+    border: none;
+    color: #000;
+    background-color: #fff;
+}
+
+
+/* footer */
+#footer {
+    background-color: #1a1a1a;
+    color: #fff;
+    padding: 40px 20px;
+    text-align: center;
+}
+
+.footer-container {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.footer-section {
+    flex: 1;
+    margin: 20px;
+    min-width: 250px;
+    text-align: justify; /* Justify the text */
+}
+
+.footer-section h3 {
+    font-size: 1.6em;
+    margin-bottom: 20px;
+    color: #fff;
+    text-align: left; /* Make the heading align to the left */
+}
+
+.footer-section p,
+.footer-section a {
+    font-size: 1em;
+    color: #ccc;
+    margin: 8px 0;
+    text-decoration: none;
+}
+
+.footer-section a:hover {
+    color: #fff; /* Change hover color to white */
+}
+
+.social-links a {
+    margin-right: 15px;
+    text-decoration: none;
+    color: #ccc;
+}
+
+.social-links a:hover {
+    color: #fff; /* Social media links change to white on hover */
+}
+
+.footer-section ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-section ul li {
+    margin: 10px 0;
+}
+
+.footer-section ul li a {
+    color: #ccc;
+}
+
+.footer-section ul li a:hover {
+    color: #fff; /* Change hover color to white */
+}
